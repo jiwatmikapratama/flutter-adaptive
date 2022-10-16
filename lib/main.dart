@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_adaptive/screens/androidlayout.dart';
 import 'package:flutter_adaptive/screens/iosLayout.dart';
 
@@ -13,26 +12,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
-  double _value = 0.0;
-  bool isSwitched = false;
-  void toggleSwitch(bool value) {
-    var textValue = 'Switch is OFF';
-    if (isSwitched == false) {
-      setState(() {
-        isSwitched = true;
-        textValue = 'Switch Button is ON';
-      });
-      print('Switch Button is ON');
-    } else {
-      setState(() {
-        isSwitched = false;
-        textValue = 'Switch Button is OFF';
-      });
-      print('Switch Button is OFF');
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -44,11 +23,10 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Halo'),
+          title: Text('Flutter Adaptive-Main Page'),
         ),
         body: Column(
           children: [
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -56,16 +34,7 @@ class _MyAppState extends State<MyApp> {
                 navigateLayoutButton(IosLayout(), 'Tampilan IOS')
               ],
             )
-            // Slider(
-            //   min: 0.0,
-            //   max: 100.0,
-            //   value: _value,
-            //   onChanged: (value) {
-            //     setState(() {
-            //       _value = value;
-            //     });
-            //   },
-            // ),
+            //
             // CupertinoSlider(
             //   min: 0.0,
             //   max: 100.0,
@@ -76,11 +45,7 @@ class _MyAppState extends State<MyApp> {
             //     });
             //   },
             // ),
-            // Switch(
-            //   onChanged: toggleSwitch,
-            //   value: isSwitched,
-            //   activeColor: Colors.blue,
-            // ),
+            //
             // CupertinoSwitch(
             //   // This bool value toggles the switch.
             //   onChanged: toggleSwitch,
@@ -102,8 +67,11 @@ class navigateLayoutButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton.icon(
-      onPressed: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => page),);
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => page),
+        );
       },
       icon: Icon(Icons.android),
       style: TextButton.styleFrom(
@@ -114,4 +82,3 @@ class navigateLayoutButton extends StatelessWidget {
     );
   }
 }
-

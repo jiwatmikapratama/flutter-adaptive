@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_adaptive/components/widgetsandroid.dart';
 
 class AndroidLayout extends StatefulWidget {
-  const AndroidLayout({Key? key}) : super(key: key);
-
   @override
   _AndroidLayoutState createState() => _AndroidLayoutState();
 }
@@ -14,7 +13,23 @@ class _AndroidLayoutState extends State<AndroidLayout> {
       appBar: AppBar(
         title: Text('Ini adalah Tampilan Android'),
       ),
-      body: Container(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text('Ini adalah slider Android'),
+            SliderWidgetAndroid(),
+            Text('Ini adalah Switch Android'),
+            SwitchWidgetAndroid(),
+            Text('Ini adalah Text Field Android'),
+            TextField(),
+            Text('Ini adalah Icon Android'),
+            Icon(
+              Icons.share,
+              size: 50,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

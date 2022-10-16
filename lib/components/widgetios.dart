@@ -1,16 +1,16 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
-class SliderWidgetAndroid extends StatefulWidget {
+class SliderWidgetIos extends StatefulWidget {
   @override
-  _SliderWidgetAndroidState createState() => _SliderWidgetAndroidState();
+  _SliderWidgetIosState createState() => _SliderWidgetIosState();
 }
 
-class _SliderWidgetAndroidState extends State<SliderWidgetAndroid> {
+class _SliderWidgetIosState extends State<SliderWidgetIos> {
   double _value = 0.0;
 
   @override
   Widget build(BuildContext context) {
-    return Slider(
+    return CupertinoSlider(
       min: 0.0,
       max: 100.0,
       value: _value,
@@ -23,14 +23,14 @@ class _SliderWidgetAndroidState extends State<SliderWidgetAndroid> {
   }
 }
 
-class SwitchWidgetAndroid extends StatefulWidget {
-  const SwitchWidgetAndroid({Key? key}) : super(key: key);
+class SwitchWidgetIos extends StatefulWidget {
+  const SwitchWidgetIos({Key? key}) : super(key: key);
 
   @override
-  _SwitchWidgetAndroidState createState() => _SwitchWidgetAndroidState();
+  _SwitchWidgetIosState createState() => _SwitchWidgetIosState();
 }
 
-class _SwitchWidgetAndroidState extends State<SwitchWidgetAndroid> {
+class _SwitchWidgetIosState extends State<SwitchWidgetIos> {
   bool isSwitched = false;
   void toggleSwitch(bool value) {
     var textValue = 'Switch is OFF';
@@ -51,10 +51,10 @@ class _SwitchWidgetAndroidState extends State<SwitchWidgetAndroid> {
 
   @override
   Widget build(BuildContext context) {
-    return Switch(
+    return CupertinoSwitch(
       onChanged: toggleSwitch,
       value: isSwitched,
-      activeColor: Colors.blue,
+      activeColor: CupertinoColors.activeBlue,
     );
   }
 }

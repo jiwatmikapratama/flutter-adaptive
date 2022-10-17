@@ -14,3 +14,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+Tampilan IOS:
+![android-adaptive](https://user-images.githubusercontent.com/88972053/196077687-43035ea4-dd00-41b8-8171-03d228f0ee70.jpg)
+
+Tampilan Android:
+![ios-adaptive](https://user-images.githubusercontent.com/88972053/196077673-6e0516a9-47ff-4eff-af44-4cb9eda29910.jpg)
